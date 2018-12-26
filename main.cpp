@@ -1,39 +1,21 @@
-#include <iostream>
+﻿#include <iostream>
 #include "point.h"
 #include "vector.h"
 #include "triangulate.h"
 
 int main()
 {
-	
 	setlocale(LC_ALL, "rus");
 
 	/**
-	* Èíèöèàëèçèðóåì ìíîãîóãîëüíèê
+	* Инициализируем многоугольник
 	*/
-	point A;	//example
-	A.x = 0;
-	A.y = 0;
-
-	point B;
-	B.x = 4;
-	B.y = 0;
-
-	point C;
-	C.x = 2;
-	C.y = 3;
-
-	point D;
-	D.x = -1;
-	D.y = 0;
-
-	point E;
-	E.x = -2;
-	E.y = 3;
-
-	point F;
-	F.x = -2;
-	F.y = -3;
+	point A(0,0);	//example
+	point B(4,0);
+	point C(2,3);
+	point D(-1,0);
+	point E(-2,3);
+	point F(-2,-3);
 
 	Vector <point> p;
 	p.push_back(A);
@@ -47,19 +29,18 @@ int main()
 	point T[count][3];
 
 	/**
-	* Âûïîëíÿåì òðèàíãóëÿöèþ
+	* Выполняем триангуляцию
 	*/
 	triangulate res;
 	res.triangulator(p, T);
 
 	/**
-	* Âûâîä ðåøåíèÿ òðèàíãóëÿöèè
+	* Вывод решения триангуляции
 	*/
-	std::cout << "Êîëè÷åñòâî òðåóãîëüíèêîâ â òðèàíãóëÿöèè: " << count_triang << std::endl;
-	//std::cout << "======" << std::endl;
+	std::cout << "Количество треугольников в триангуляции: " << count_triang << std::endl;
 	for (int i = 0; i < count_triang; i++)
 	{
-		std::cout << "Òðåãîëüíèê " << i + 1 << std::endl;
+		std::cout << "Трегольник " << i + 1 << std::endl;
 		for (int j = 0; j < 3; j++)
 		{
 			std::cout << T[i][j].x << " " << T[i][j].y << std::endl;

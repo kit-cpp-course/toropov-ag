@@ -1,8 +1,8 @@
-#pragma once
+п»ї#pragma once
 #include <cmath>
 
 /**
-* Класс, описывающий точку
+* РљР»Р°СЃСЃ, РѕРїРёСЃС‹РІР°СЋС‰РёР№ С‚РѕС‡РєСѓ
 */
 class point
 {
@@ -11,14 +11,15 @@ public:
 	point(double x, double y);
 	~point();
 	/**
-	* Кординаты x, y
+	* РљРѕСЂРґРёРЅР°С‚С‹ x, y
 	*/
 	double x, y;
+
 	/**
-	* Возвращает длину между точками
+	* Р’РѕР·РІСЂР°С‰Р°РµС‚ РґР»РёРЅСѓ РјРµР¶РґСѓ С‚РѕС‡РєР°РјРё
 	*
-	* @param point a, point b две точки
-	* @returns длина  отрезка между точками
+	* @param point a, point b РґРІРµ С‚РѕС‡РєРё
+	* @returns РґР»РёРЅР°  РѕС‚СЂРµР·РєР° РјРµР¶РґСѓ С‚РѕС‡РєР°РјРё
 	*/
 	double distanceTo(point a, point b);
 };

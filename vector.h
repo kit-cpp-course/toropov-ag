@@ -1,6 +1,6 @@
-#pragma once
+п»ї#pragma once
 /**
-* Класс, реализующий вектор
+* РљР»Р°СЃСЃ, СЂРµР°Р»РёР·СѓСЋС‰РёР№ РІРµРєС‚РѕСЂ
 */
 template <class T>
 class Vector
@@ -14,17 +14,17 @@ public:
 	Vector(const Vector<T> & v);
 	~Vector();
 	/**
-	* Ёмкость
+	* РЃРјРєРѕСЃС‚СЊ
 	*/
 	unsigned int capacity() const;
 
 	/**
-	* Размер
+	* Р Р°Р·РјРµСЂ
 	*/
 	unsigned int size() const;
 
 	/**
-	* Итераторы начала и конца
+	* РС‚РµСЂР°С‚РѕСЂС‹ РЅР°С‡Р°Р»Р° Рё РєРѕРЅС†Р°
 	*/
 	iterator begin();
 	iterator end();
@@ -33,28 +33,28 @@ public:
 	T & back();
 
 	/**
-	* Добавление элемента в конец вектора
+	* Р”РѕР±Р°РІР»РµРЅРёРµ СЌР»РµРјРµРЅС‚Р° РІ РєРѕРЅРµС† РІРµРєС‚РѕСЂР°
 	*/
 	void push_back(const T & value);
 
 	/**
-	* Удаление элемента
+	* РЈРґР°Р»РµРЅРёРµ СЌР»РµРјРµРЅС‚Р°
 	*/
 	void pop_back();
 
 	/**
-	* Изменение емкости
+	* РР·РјРµРЅРµРЅРёРµ РµРјРєРѕСЃС‚Рё
 	*/
 	void reserve(unsigned int capacity);
 
 	/**
-	* Необходимые операторы
+	* РќРµРѕР±С…РѕРґРёРјС‹Рµ РѕРїРµСЂР°С‚РѕСЂС‹
 	*/
 	T & operator[](unsigned int index);
 	Vector<T> & operator=(const Vector<T> &);
 
 	/**
-	* Очистить вектор
+	* РћС‡РёСЃС‚РёС‚СЊ РІРµРєС‚РѕСЂ
 	*/
 	void clear();
 private:
